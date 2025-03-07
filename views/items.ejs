@@ -1,0 +1,17 @@
+<%- include('./partials/header.ejs') %>
+    <main>
+        <section id="card-container">
+            <% items.forEach(item => { %>
+                <section class="card">
+                    <a href="/items/<%= item.id %>">
+                        <img src="<%= item.image %>" alt="<%= item.title %>">
+                    </a>
+                    <h3><%= item.title %></h3>
+                    <p>Condition: <span class="condition"><%= item.condition %></span></p>
+                    <p>Price: $<%= item.price %></p>
+                    <a href="/items/<%= item.id %>" class="view-details">View Details</a>
+                </section>
+            <% }) %>
+        </section>
+    </main>
+<%- include('./partials/footer.ejs') %>

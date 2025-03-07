@@ -1,0 +1,32 @@
+<%- include('./partials/header.ejs') %>
+
+<main>
+    <div id="form-container">
+        <h2>Edit Flower Arrangement</h2>
+        <form action="/items/<%= item.id %>/edit" method="POST">
+            <label for="title">Arrangement Name:</label>
+            <input type="text" id="title" name="title" value="<%= item.title %>" required>
+
+            <label for="seller">Seller Name:</label>
+            <input type="text" id="seller" name="seller" value="<%= item.seller %>" required>
+
+            <label for="price">Price ($):</label>
+            <input type="number" id="price" name="price" min="0.01" step="0.01" value="<%= item.price %>" required>
+
+            <label for="condition">Condition:</label>
+            <select id="condition" name="condition" required>
+                <option value="New" <%= item.condition === 'New' ? 'selected' : '' %>>New</option>
+                <option value="Like New" <%= item.condition === 'Like New' ? 'selected' : '' %>>Like New</option>
+                <option value="Good" <%= item.condition === 'Good' ? 'selected' : '' %>>Good</option>
+            </select>
+
+            <label for="details">Description:</label>
+            <textarea id="details" name="details" rows="4" required><%= item.details %></textarea>
+            <br>
+            <button type="submit" id="submit-btn">Update Arrangement</button>
+            <a href="/items/<%= item.id %>" class="cancel-btn">Cancel</a>
+        </form>
+    </div>
+</main>
+
+<%- include('./partials/footer.ejs') %>

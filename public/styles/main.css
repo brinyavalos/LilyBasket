@@ -1,0 +1,373 @@
+:root {
+    --primary-color: #ead2ac;
+    --secondary-color: #df928e; /* Default button color */
+    --tertiary-color: #c58882; /* Hover button color */
+    --quaternary-color: #d1dede;
+    --quinary-color: #2b3d41;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--quaternary-color);
+    color: var(--quinary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    color: white;
+    padding: 80px 20px 30px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Fixed Button Styling */
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--secondary-color); /* Default pink */
+    color: white;
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--tertiary-color); /* Darker pink */
+    color: white;
+}
+
+/* Content Sections */
+.content {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 0;
+}
+
+/* Image Grid */
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#image-grid img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Care Instructions */
+#care {
+    text-align: center;
+    padding: 5px 100px;
+    margin-top: 0;
+    list-style-type: none;
+}
+
+#care li {
+    font-size: 1.01rem;
+    margin-top: 11px;
+}
+
+/* Navigation */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+#logo {
+    height: 50px;
+}
+
+#search_bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#search_bar input {
+    width: 60%;
+    max-width: 400px;
+    padding: 0.5rem;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 4px;
+}
+
+#nav_bar_buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+#nav_bar_buttons a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+#nav_bar_buttons a:hover {
+    background-color: var(--tertiary-color);
+    color: white;
+}
+
+/* Items Page */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 50px;
+    margin-top: 25px;
+    margin-bottom: 70px;
+    padding: 0 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.view-details {
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-top: 1pc;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-details:hover {
+    background-color: darken(var(--tertiary-color), 10%);
+    color: var(--secondary-color);
+}
+
+/* Item Page */
+#details-section {
+    text-align: center;
+}
+
+#details-section img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+#details-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#details-section h4 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+#details-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+#button-container {
+    margin-top: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#button-container button {
+    padding: 0.7rem 1.5rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#button-container .checkout {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+#button-container .checkout:hover {
+    background-color: #b3b3b3;
+}
+
+/* New Item Form */
+#form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+#occasion, #arrangement-name, #florist, #price, #description, #image {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--quinary-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#description {
+    height: 120px;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit-btn:hover {
+    background-color: var(--tertiary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    color: var(--quinary-color);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer .socials a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .socials img {
+    height: 30px;
+    width: 30px;
+}
+.edit-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.delete-form {
+    display: inline-block;
+}
+
+.delete-button {
+    padding: 8px 16px;
+    background-color: var(--quinary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: var(--tertiary-color);
+}
+
+.delete-button:hover {
+    background-color: #1a2429;
+}
+
+.cancel-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--quaternary-color);
+    color: var(--quinary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #bfcbcb;
+}

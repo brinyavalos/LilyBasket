@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+    <main>
+        <section id="details-section">
+            <img src="<%= item.image %>" alt="<%= item.title %>">
+            <h2><%= item.title %></h2>
+            <h4>Description:</h4>
+            <p><%= item.details %></p>
+            <h4>Price:</h4>
+            <p>$<%= item.price %></p>
+            <section id="button-container">
+                <button class="add">Add to Cart</button>
+                <button class="checkout">Checkout</button>
+                <a href="/items/<%= item.id %>/edit" class="edit-button">Edit</a>
+                <form action="/items/<%= item.id %>/delete" method="POST" class="delete-form">
+                    <button type="submit" class="delete-button">Delete</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
